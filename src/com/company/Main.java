@@ -25,9 +25,9 @@ public class Main {
             switch (number) {
                 case 1 -> new TablesDB().GetTable();
                 case 2 -> {
-                    Scanner scannerName = new Scanner(System.in);
+                    Scanner productName = new Scanner(System.in);
                     System.out.print("Input product name: ");
-                    String name = scannerName.nextLine();
+                    String name = productName.nextLine();
                     System.out.print("Input product price: ");
                     int price = scanner.nextInt();
                     new InsertDB().SetValues(name, price);
