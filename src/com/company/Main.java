@@ -14,12 +14,15 @@ public class Main {
             System.out.println("|                               Что вы хотите сделать?                             |");
             System.out.println("------------------------------------------------------------------------------------");
             System.out.println("| 1. Вывести данные из БД\t | 2. Добавить данные в БД\t | 3. Удалить данные из БД |");
-            //System.out.println("------------------------------------------------------------------------------------");
             System.out.println("| 4. Выйти из программы                                                            |");
             System.out.println("------------------------------------------------------------------------------------");
 
-            Scanner scanner = new Scanner(System.in);
             System.out.print("Выберите операцию: ");
+            Scanner scanner = new Scanner(System.in);
+            while (!scanner.hasNextInt()) {
+                if (!scanner.hasNextInt()) System.out.print("Вы ввели не число!\nВыберите операцию: ");
+                scanner.next();
+            }
             int number = scanner.nextInt();
 
             switch (number) {
