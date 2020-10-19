@@ -12,7 +12,7 @@ public class TablesDB {
             if (resultSet != null) {
                 ResultSetMetaData rsmd = resultSet.getMetaData();
                 int columnCount = rsmd.getColumnCount();
-                System.out.println("-------------------------");
+                System.out.print("-------------------------\n|");
                 for (int i = 1; i <= columnCount; i++) {
                     String nameRows = rsmd.getColumnName(i);
                     System.out.printf("%s\t", nameRows);
@@ -22,7 +22,7 @@ public class TablesDB {
                     var id = resultSet.getInt(1);
                     var name = resultSet.getString(2);
                     var price = resultSet.getInt(3);
-                    System.out.printf("%d\t%s\t%d\t|\n", id, name, price);
+                    System.out.printf("|%d\t%s\t%d\t|\n", id, name, price);
                 }
             }
         } catch (Exception e) {
