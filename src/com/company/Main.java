@@ -1,8 +1,8 @@
 package com.company;
 
-import com.company.db.DeleteDB;
-import com.company.db.InsertDB;
-import com.company.db.TablesDB;
+import com.company.db.Delete;
+import com.company.db.Insert;
+import com.company.db.Tables;
 
 import java.util.Scanner;
 
@@ -26,19 +26,19 @@ public class Main {
             int number = scanner.nextInt();
 
             switch (number) {
-                case 1 -> new TablesDB().GetTable();
+                case 1 -> new Tables().GetTable();
                 case 2 -> {
                     Scanner productName = new Scanner(System.in);
                     System.out.print("Input product name: ");
                     String name = productName.nextLine();
                     System.out.print("Input product price: ");
                     int price = scanner.nextInt();
-                    new InsertDB().SetValues(name, price);
+                    new Insert().SetValues(name, price);
                 }
                 case 3 -> {
                     System.out.print("Введите номер строки который нужно удалить: ");
                     int row = scanner.nextInt();
-                    new DeleteDB().Delete(row);
+                    new Delete().setDeleteRows(row);
                 }
                 case 4 -> {
                     System.out.println("Пока! :)");

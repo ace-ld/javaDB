@@ -9,7 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class ConnectDB {
+public class Connect {
     public static Connection getConnection() throws SQLException, IOException {
 
         Properties props = new Properties();

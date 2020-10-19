@@ -1,11 +1,10 @@
 package com.company.db;
 
 import java.sql.PreparedStatement;
-import java.sql.Statement;
 
-public class DeleteDB {
-    public void Delete(int row) {
-        try (var conn = ConnectDB.getConnection()) {
+public class Delete {
+    public void setDeleteRows(int row) {
+        try (var conn = Connect.getConnection()) {
             String sql = "DELETE FROM Products WHERE Id = ?";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setInt(1, row);

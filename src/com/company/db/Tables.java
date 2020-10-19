@@ -4,9 +4,9 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 
-public class TablesDB {
+public class Tables {
     public void GetTable() {
-        try (var conn = ConnectDB.getConnection()) {
+        try (var conn = Connect.getConnection()) {
             Statement statement = conn.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM Products");
             if (resultSet != null) {
